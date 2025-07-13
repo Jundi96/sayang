@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Untuk Amanda Kharisma Putri</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #fff5f5;
+        color: #333;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        text-align: center;
+        padding: 30px 0;
+        position: relative;
+      }
+
+      h1 {
+        font-family: "Dancing Script", cursive;
+        font-size: 3rem;
+        color: #e75480;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: #888;
+        margin-bottom: 30px;
+      }
+
+      .heart-icon {
+        font-size: 2rem;
+        color: #e75480;
+        margin: 0 5px;
+        display: inline-block;
+        animation: beat 1.5s infinite;
+      }
+
+      @keyframes beat {
+        0% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.1);
+        }
+        40% {
+          transform: scale(1);
+        }
+        60% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .hero-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .hero-image:hover {
+        transform: scale(1.02);
+      }
+
+      .message-box {
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        margin: 20px 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        position: relative;
+      }
+
+      .message-box::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+        background: white;
+        transform: rotate(45deg);
+        z-index: -1;
+      }
+
+      p {
+        margin-bottom: 15px;
+        text-align: justify;
+      }
+
+      .memory-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+        margin: 30px 0;
+      }
+
+      .memory-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        aspect-ratio: 1;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .memory-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .memory-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .memory-item:hover img {
+        transform: scale(1.1);
+      }
+
+      .memory-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(231, 84, 128, 0.8);
+        color: white;
+        padding: 5px;
+        text-align: center;
+        font-size: 0.8rem;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .memory-item:hover .memory-caption {
+        transform: translateY(0);
+      }
+
+      .gallery-title {
+        text-align: center;
+        margin: 30px 0 10px;
+        color: #e75480;
+        font-family: "Dancing Script", cursive;
+        font-size: 2rem;
+      }
+
+      .love-meter {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 30px 0;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .meter-container {
+        width: 100%;
+        height: 30px;
+        background: #f0f0f0;
+        border-radius: 15px;
+        margin: 15px 0;
+        overflow: hidden;
+      }
+
+      .meter-fill {
+        height: 100%;
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        width: 100%;
+        border-radius: 15px;
+        transition: width 1s ease;
+      }
+
+      .meter-text {
+        font-family: "Dancing Script", cursive;
+        font-size: 1.5rem;
+        color: #e75480;
+      }
+
+      button {
+        background: #e75480;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 25px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: block;
+        margin: 20px auto;
+        box-shadow: 0 3px 10px rgba(231, 84, 128, 0.3);
+      }
+
+      button:hover {
+        background: #d43d6f;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(231, 84, 128, 0.4);
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px 0;
+        color: #888;
+        font-size: 0.9rem;
+      }
+
+      .floating-hearts {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .heart {
+        position: absolute;
+        font-size: 20px;
+        color: rgba(231, 84, 128, 0.5);
+        animation: float 5s ease-in infinite;
+        opacity: 0;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100vh) rotate(720deg);
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2rem;
+        }
+        .subtitle {
+          font-size: 1rem;
+        }
+        .hero-image {
+          height: 200px;
+        }
+        .message-box {
+          padding: 20px;
+        }
+        .memory-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floating-hearts" id="hearts-container"></div>
+
+    <div class="container">
+      <header>
+        <h1>Untuk Amanda Kharisma Putri <span class="heart-icon">♥</span></h1>
+        <div class="subtitle">
+          Sebuah pesan kecil untuk orang yang sangat berarti
+        </div>
+      </header>
+
+      <img
+        src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/684486ef-fe74-486b-be74-524d402c1dba.png"
+        alt="Pasangan romantis berjalan di pantai saat matahari terbenam dengan latar belakang langit oranye dan pink"
+        class="hero-image"
+      />
+
+      <div class="message-box">
+        <p>Halo Amanda,</p>
+        <p>
+          Dari semua hal indah di dunia ini, bertemu denganmu adalah yang
+          terbaik. Setiap hari bersamamu adalah anugerah yang tak ternilai,
+          seperti bunga yang mekar di pagi hari atau bintang yang bersinar di
+          malam gelap.
+        </p>
+        <p>
+          Kamu membawa begitu banyak kebahagiaan dalam hidupku. Senyummu yang
+          hangat, tawamu yang menular, dan kepedulianmu yang tulus membuat
+          setiap hari terasa istimewa.
+        </p>
+        <p>
+          Aku berharap halaman sederhana ini bisa menyampaikan setidaknya
+          sebagian kecil dari perasaan yang aku miliki untukmu. Kamu luar biasa,
+          dan aku bersyukur bisa mengenalmu.
+        </p>
+        <p>Dengan semua cinta,</p>
+        <p>Seseorang yang sangat mencintaimu</p>
+      </div>
+
+      <h2 class="gallery-title">Kenangan Indah</h2>
+      <div class="memory-grid">
+        <div class="memory-item">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/882e6bf4-5001-49dd-922d-4f2ada37e45d.png"
+            alt="Pasangan berfoto bersama di taman dengan latar belakang bunga warna-warni"
+          />
+          <div class="memory-caption">Hari yang cerah bersamamu</div>
+        </div>
+        <div class="memory-item">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/90ad1258-de97-452b-b105-62677d7d957b.png"
+            alt="Tanggangan tangan romantis di tepi pantai dengan jejak kaki di pasir"
+          />
+          <div class="memory-caption">Jejak kita di pantai</div>
+        </div>
+        <div class="memory-item">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cf032553-786a-423e-847c-2ae616ee2aba.png"
+            alt="Makan malam romantis dengan lilin dan anggur di restoran mewah"
+          />
+          <div class="memory-caption">Malam spesial kita</div>
+        </div>
+        <div class="memory-item">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c0994bad-4a3a-4a26-b1b5-a210880979fd.png"
+            alt="Pasangan berpose lucu dengan topi konyol di tempat foto booth"
+          />
+          <div class="memory-caption">Momen konyol kita</div>
+        </div>
+      </div>
+
+      <div class="love-meter">
+        <div class="meter-text">Meter Cinta</div>
+        <div class="meter-container">
+          <div class="meter-fill" id="love-meter-fill"></div>
+        </div>
+        <button id="measure-love">Ukur Cinta Kita</button>
+      </div>
+
+      <footer>
+        Dibuat dengan <span class="heart-icon">♥</span> untuk Amanda Kharisma
+        Putri
+      </footer>
+    </div>
+
+    <script>
+      // Floating hearts animation
+      function createHearts() {
+        const container = document.getElementById("hearts-container");
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "♥";
+
+        // Random position
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.top = Math.random() * 100 + "vh";
+
+        // Random size
+        const size = Math.random() * 20 + 10;
+        heart.style.fontSize = size + "px";
+
+        // Random animation duration
+        heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+
+        container.appendChild(heart);
+
+        // Remove heart after animation completes
+        setTimeout(() => {
+          heart.remove();
+        }, 5000);
+      }
+
+      // Create hearts periodically
+      setInterval(createHearts, 300);
+
+      // Love meter
+      document
+        .getElementById("measure-love")
+        .addEventListener("click", function () {
+          const meter = document.getElementById("love-meter-fill");
+          let percentage = 0;
+          meter.style.width = "0%";
+
+          const interval = setInterval(() => {
+            percentage += Math.random() * 5;
+            if (percentage >= 100) {
+              percentage = 100;
+              clearInterval(interval);
+            }
+            meter.style.width = percentage + "%";
+          }, 100);
+        });
+
+      // Smooth scroll for memory items
+      document.querySelectorAll(".memory-item").forEach((item) => {
+        item.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>
